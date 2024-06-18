@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Projeto em vue.js
+### projeto desenvolvido em sala de aula, durante as aulas criamos a estrutura do projeto, navbar, componente blog, login, logout e pagina de login
