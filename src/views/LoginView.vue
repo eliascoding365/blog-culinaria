@@ -32,7 +32,6 @@ export default {
     };
   },
   mounted() {
-    // Verifique se as credenciais estão no localStorage
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
     if (storedUsername && storedPassword) {
@@ -46,11 +45,9 @@ export default {
         this.successMessage = 'Login successful!';
         console.log("Usuario conectado: " + this.username);
         
-        // Armazene as credenciais no localStorage
         localStorage.setItem('username', this.username);
         localStorage.setItem('password', this.password);
         
-        // Redirecione para a página inicial "/"
         this.$router.push('/');
       } else {
         this.errorMessage = 'Nome de usuário ou senha incorretos. Por favor, tente novamente.';

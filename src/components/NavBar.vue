@@ -25,21 +25,17 @@
 export default {
   data() {
     return {
-      isLoggedIn: false // Defina como true se o usuário estiver logado
+      isLoggedIn: false 
     };
   },
   methods: {
     logout() {
-      // Implemente a lógica de logout aqui
-      // Por exemplo, limpar as credenciais do localStorage e redirecionar para a página de login
       localStorage.removeItem('username');
       localStorage.removeItem('password');
       this.isLoggedIn = false;
-      // Redirecione para a página de login
     }
   },
   mounted() {
-    // Verifique se o usuário está logado ao montar o componente Navbar
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
     
